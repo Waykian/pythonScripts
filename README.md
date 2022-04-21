@@ -10,7 +10,13 @@ $ git clone https://github.com/theWacian/pythonScripts.git
 ```
 $ cd pythonScripts
 ```
-3. Install the requirements
+Each one of the subdirectories contains scripts independent from each other, so
+
+3. Change the working directory to the directory of the script you want to use
+```
+cd scriptDirectory
+```
+4. Install the requirements
 ```
 $ pip3 install -r requirements.txt
 ```
