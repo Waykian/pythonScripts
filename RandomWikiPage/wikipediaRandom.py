@@ -1,17 +1,14 @@
-import subprocess
-from bs4 import BeautifulSoup
-
-
-import sys
-print(sys.version)
+import fetchRandomWikipediaPage
 
 while True:
-    check = input("Do you want to read the article? ")
+    title = fetchRandomWikipediaPage.getTitle()
+    print("Do you want to read the article \"" + title + "\"? (y/n)")
+    check = input()
     match check:
         case ('y'|'Y'):
-            p = subprocess.run(["python", "RandomWikiPage/fetchRandomWikipediaPage.py"])
+            fetchRandomWikipediaPage.fetch(title)
         case ('n'|'N'):
-            continue
+             continue
         case _:
             print("Quitting the program")
             quit()
