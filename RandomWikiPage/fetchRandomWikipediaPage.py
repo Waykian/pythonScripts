@@ -25,7 +25,7 @@ def fetch(subject: str):
         "format": "json",
         "prop":"text",
         "redirects":""
-    }
+    } 
     
     response = requests.get(url, params=params)
     data = response.json()
